@@ -2,6 +2,7 @@
 import 'package:news_api_flutter_package/news_api_flutter_package.dart';
 import 'package:news_api_flutter_package/model/article.dart';
 import 'package:news_app/models/favourite_model.dart';
+import "package:flutter_dotenv/flutter_dotenv.dart";
 import 'package:flutter/material.dart';
 import 'bottom_navigation.dart';
 import 'package:intl/intl.dart';
@@ -37,7 +38,7 @@ class _GetCategoriesState extends State<GetCategories> {
   }
 
   Future<List<Article>> getNewsData() async {
-    NewsAPI newsAPI = NewsAPI("Your_API_Key");
+    NewsAPI newsAPI = NewsAPI('Your Api Key');
     return await newsAPI.getTopHeadlines(
       country: "in",
       query: searchTerm,
