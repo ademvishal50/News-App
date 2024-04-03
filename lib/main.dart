@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:news_app/models/favourite_model.dart';
 import 'package:news_app/screens/get_category.dart';
 import 'package:news_app/screens/landing.dart';
-
-import "package:flutter_dotenv/flutter_dotenv.dart";
 import 'screens/favourite.dart';
 import 'screens/top_stories.dart';
 import 'screens/categories.dart';
 
 void main() {
-  dotenv.load(fileName: ".env");
   List<ListArticle> articleList = [];
   List<ListArticle> likedList = [];
   String? category;
